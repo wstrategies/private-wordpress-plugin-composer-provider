@@ -64,7 +64,6 @@ jobs:
         with:
           args: unzip -qq ./package.zip -d .
 
-      # You may not need this step depending on the contents of the zip
       - name: Move
         if: ${{ steps.previous_version.outputs.tag != steps.new_version.outputs.new_version }}
         run: |
